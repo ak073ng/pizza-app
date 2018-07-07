@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/location_frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/tv_pizza_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pizza name"
+        android:textColor="@color/red"
+        android:textSize="20dp"
+        android:paddingHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_pizza_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pizza name"
+        android:textColor="@color/light_gray"
+        android:textSize="15dp"
+        android:paddingHorizontal="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_pizza_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ordered on 27 Feb 2018: 2:47pm"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:paddingHorizontal="20dp"
+        android:layout_marginBottom="20dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lighter_gray"
+        android:layout_marginHorizontal="20dp"/>
+
+</LinearLayout>

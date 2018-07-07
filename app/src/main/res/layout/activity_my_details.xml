@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MyDetailsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_details_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:theme="@style/AppTheme.AppBarOverlay"
+        android:background="@color/white"
+        android:elevation="2dp">
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/my_details_info"
+        android:textColor="@color/gray"
+            android:textSize="20dp"
+            android:gravity="left"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"/>
+
+        <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="First name"
+        android:textColorHint="@color/light_gray"
+        android:textColor="@color/black"
+        android:background="@drawable/edit_text_style"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Last name"
+        android:textColorHint="@color/light_gray"
+        android:textColor="@color/black"
+        android:background="@drawable/edit_text_style"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:textColorHint="@color/light_gray"
+        android:textColor="@color/black"
+        android:background="@drawable/edit_text_style"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/et_mobile_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mobile number"
+        android:textColorHint="@color/light_gray"
+        android:textColor="@color/black"
+        android:background="@drawable/edit_text_style"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="National ID"
+        android:textColorHint="@color/light_gray"
+        android:textColor="@color/black"
+        android:background="@drawable/edit_text_style"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btn_to_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:background="@drawable/gray_solid_background"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="50dp"/>
+
+</LinearLayout>

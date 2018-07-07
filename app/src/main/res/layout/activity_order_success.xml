@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="10dp">
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:paddingHorizontal="10dp"
+        android:orientation="vertical"
+        tools:context=".OrderFullActivity">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/order_successful"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="40dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/order_successful"
+            android:textSize="20dp"
+            android:textColor="@color/green"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_gravity="end"
+        android:paddingVertical="20dp">
+
+        <Button
+            android:id="@+id/btn_to_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back to home"
+            android:textColor="@color/lighter_gray"
+            android:background="@drawable/gray_solid_background"
+            android:layout_marginBottom="20dp"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:id="@+id/btn_check_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Track order"
+            android:textColor="@color/white"
+            android:background="@drawable/black_solid_background"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/location_frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical"
+    android:background="@drawable/round_corner_layout"
+    android:layout_marginBottom="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/pizza_view_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/img3"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/pizza_view_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pizza name"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:layout_alignParentBottom="true"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:gravity="left"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
