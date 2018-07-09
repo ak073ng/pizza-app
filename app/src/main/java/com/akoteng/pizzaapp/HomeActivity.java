@@ -2,7 +2,9 @@ package com.akoteng.pizzaapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -10,6 +12,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,9 +22,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.akoteng.pizzaapp.adapters.PizzaAdapter;
+import com.akoteng.pizzaapp.classes.Constants;
 import com.akoteng.pizzaapp.classes.Pizza;
 
 import java.util.ArrayList;
@@ -66,6 +71,7 @@ public class HomeActivity extends AppCompatActivity
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setBackgroundColor(getResources().getColor(R.color.green));
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -82,6 +88,20 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //set user name and email to view
+        View headerView = navigationView.getHeaderView(0);
+        TextView navUserName = (TextView) headerView.findViewById(R.id.user_name_tv);
+        TextView navUserEmail = (TextView) headerView.findViewById(R.id.user_email_tv);
+
+        //initialize shared preference
+        SharedPreferences pref = getSharedPreferences(Constants.USER, Context.MODE_PRIVATE);
+
+        String user_name = pref.getString(Constants.FIRSTNAME, null) + " " + pref.getString(Constants.SURNAME, null);
+        String user_email = pref.getString(Constants.EMAIL, null);
+
+        navUserName.setText(user_name);
+        navUserEmail.setText(user_email);
 
     }
 
@@ -144,13 +164,21 @@ public class HomeActivity extends AppCompatActivity
     }
 
     public void assignLocationValues(){
-        String city_name = getIntent().getStringExtra(CITY_NAME_KEY);
-        String area_name = getIntent().getStringExtra(AREA_NAME_KEY);
 
-        //city_name = area_name = "test";
+        //home app bar
+        TextView show_city = (TextView)findViewById(R.id.tv_show_city);
+        TextView show_location = (TextView)findViewById(R.id.tv_show_location);
 
-        tv_show_location = (TextView)findViewById(R.id.tv_show_location);
-        tv_show_location.setText(city_name.toUpperCase() + " - " + area_name);
+        //initialize shared preference
+        SharedPreferences pref = getSharedPreferences(Constants.USER, Context.MODE_PRIVATE);
+
+        //get city and location from preference and store in variable
+        String user_city = pref.getString(Constants.CITY, null);
+        String user_location = pref.getString(Constants.LOCATION, null);
+
+        //set data to view
+        show_city.setText(user_city);
+        show_location.setText(user_location);
 
     }
 

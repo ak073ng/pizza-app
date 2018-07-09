@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/edit_profile_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We just need this much from you, for a convenient shopping experience"
+                android:textSize="20sp"
+                android:textColor="@color/green"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginVertical="10dp"
+                android:background="@color/green"/>
+
+            <!--name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textSize="15sp"
+                    android:textColor="@color/gray"
+                    android:textAllCaps="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/firstname_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="10dp"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/green"
+                        android:hint="First name"
+                        android:gravity="center_horizontal"
+                        android:inputType="textCapWords"
+                        android:layout_weight="1"/>
+
+                    <EditText
+                        android:id="@+id/surname_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="10dp"
+                        android:textColor="@color/green"
+                        android:hint="Surname"
+                        android:gravity="center_horizontal"
+                        android:inputType="textCapWords"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--email-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="15sp"
+                    android:textColor="@color/gray"
+                    android:textAllCaps="true"/>
+
+                <EditText
+                    android:id="@+id/email_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="10dp"
+                    android:textColor="@color/green"
+                    android:inputType="textEmailAddress"/>
+
+            </LinearLayout>
+
+            <!--Mobile-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone number"
+                    android:textSize="15sp"
+                    android:textColor="@color/gray"
+                    android:textAllCaps="true"/>
+
+
+                <EditText
+                    android:id="@+id/mobile_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="10dp"
+                    android:textColor="@color/green"
+                    android:inputType="number"/>
+
+            </LinearLayout>
+
+            <!--PIN-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SET A PIN FOR SECURITY"
+                    android:textSize="15sp"
+                    android:textColor="@color/gray"
+                    android:textAllCaps="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/pin_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="10dp"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/green"
+                        android:hint="New pin"
+                        android:gravity="center_horizontal"
+                        android:inputType="number"
+                        android:layout_weight="1"/>
+
+                    <EditText
+                        android:id="@+id/confirm_pin_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="10dp"
+                        android:textColor="@color/green"
+                        android:hint="Confirm pin"
+                        android:gravity="center_horizontal"
+                        android:inputType="number"
+                        android:layout_weight="1"
+                        android:maxLength="4"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--save user details button-->
+            <Button
+                android:id="@+id/save_profile_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="save and continue"
+                android:textColor="@color/white"
+                android:background="@drawable/green_solid_background"
+                android:onClick="saveUserInfo"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
