@@ -43,7 +43,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.MyViewHolder>{
     public void onBindViewHolder(@NonNull CartAdapter.MyViewHolder holder, int position) {
         Cart cart = cartList.get(position);
         holder.pizza_name.setText("Pizza name");
-        holder.pizza_info.setText("x 1: includes extra cheese, thicker crust and added sauce");
+        holder.pizza_info.setText("Size: medium, Quantity: 3 , Info: Includes extra cheese, thicker crust and added sauce");
 
     }
 

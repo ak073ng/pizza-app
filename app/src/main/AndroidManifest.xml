@@ -42,9 +42,14 @@
             android:parentActivityName=".HomeActivity" />
         <activity
             android:name=".MyDetailsActivity"
-            android:parentActivityName=".HomeActivity" />
-        <activity android:name=".PromptDetailsActivity" />
-        <activity android:name=".PasscodeActivity"></activity>
+            android:parentActivityName=".HomeActivity"></activity>
+        <activity
+            android:name=".PromptDetailsActivity" />
+        <activity
+            android:name=".PasscodeActivity" />
+        <activity
+            android:name=".PizzaActivity"
+            android:parentActivityName=".HomeActivity"></activity>
     </application>
 
 </manifest>

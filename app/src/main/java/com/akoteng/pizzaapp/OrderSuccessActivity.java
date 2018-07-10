@@ -7,6 +7,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
 public class OrderSuccessActivity extends AppCompatActivity implements View.OnClickListener {
 
     //initialize
@@ -23,6 +26,13 @@ public class OrderSuccessActivity extends AppCompatActivity implements View.OnCl
 
         btn_check_order = (Button)findViewById(R.id.btn_check_order);
         btn_check_order.setOnClickListener(this);
+
+        //animate splash page logo
+        YoYo.with(Techniques.Tada)
+                .duration(1200)
+                .repeat(1)
+                .playOn(findViewById(R.id.success_image));
+
     }
 
     @Override

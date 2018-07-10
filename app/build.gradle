@@ -52,4 +52,7 @@ dependencies {
 
     //pin input
     implementation 'in.arjsna:passcodeview:1.2.1'
+
+    //glide - for loading images
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
 }

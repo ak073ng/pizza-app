@@ -18,90 +18,207 @@
 
     </android.support.v7.widget.Toolbar>
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/my_details_info"
-        android:textColor="@color/gray"
-            android:textSize="20dp"
-            android:gravity="left"
-            android:layout_marginHorizontal="20dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/edit_profile_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"/>
+            android:orientation="vertical">
 
-        <EditText
-        android:id="@+id/et_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="First name"
-        android:textColorHint="@color/light_gray"
-        android:textColor="@color/black"
-        android:background="@drawable/edit_text_style"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="10dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/my_details_info"
+                android:textColor="@color/gray"
+                android:textSize="20dp"
+                android:gravity="left"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
 
-    <EditText
-        android:id="@+id/et_username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Last name"
-        android:textColorHint="@color/light_gray"
-        android:textColor="@color/black"
-        android:background="@drawable/edit_text_style"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="10dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginVertical="10dp"
+                android:background="@color/gray"/>
 
-    <EditText
-        android:id="@+id/et_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email"
-        android:textColorHint="@color/light_gray"
-        android:textColor="@color/black"
-        android:background="@drawable/edit_text_style"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="10dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="10dp"/>
+            <!--name-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp">
 
-    <EditText
-        android:id="@+id/et_mobile_number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Mobile number"
-        android:textColorHint="@color/light_gray"
-        android:textColor="@color/black"
-        android:background="@drawable/edit_text_style"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="10dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textSize="15sp"
+                    android:textColor="@color/gray"
+                    android:textAllCaps="true"/>
 
-    <EditText
-        android:id="@+id/et_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="National ID"
-        android:textColorHint="@color/light_gray"
-        android:textColor="@color/black"
-        android:background="@drawable/edit_text_style"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="10dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginBottom="10dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btn_to_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Save"
-        android:textColor="@color/white"
-        android:background="@drawable/gray_solid_background"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="50dp"/>
+                    <EditText
+                        android:id="@+id/firstname_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="10dp"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/green"
+                        android:hint="First name"
+                        android:gravity="center_horizontal"
+                        android:inputType="textCapWords"
+                        android:layout_weight="1"/>
+
+                    <EditText
+                        android:id="@+id/surname_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="10dp"
+                        android:textColor="@color/green"
+                        android:hint="Surname"
+                        android:gravity="center_horizontal"
+                        android:inputType="textCapWords"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--email-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="15sp"
+                    android:textColor="@color/gray"
+                    android:textAllCaps="true"/>
+
+                <EditText
+                    android:id="@+id/email_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="10dp"
+                    android:textColor="@color/green"
+                    android:inputType="textEmailAddress"/>
+
+            </LinearLayout>
+
+            <!--Mobile-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone number"
+                    android:textSize="15sp"
+                    android:textColor="@color/gray"
+                    android:textAllCaps="true"/>
+
+                <EditText
+                    android:id="@+id/mobile_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="10dp"
+                    android:textColor="@color/green"
+                    android:inputType="number"/>
+
+            </LinearLayout>
+
+            <!--PIN-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SET A PIN FOR SECURITY"
+                    android:textSize="15sp"
+                    android:textColor="@color/gray"
+                    android:textAllCaps="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/pin_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="10dp"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/green"
+                        android:hint="New pin"
+                        android:gravity="center_horizontal"
+                        android:inputType="number"
+                        android:layout_weight="1"/>
+
+                    <EditText
+                        android:id="@+id/confirm_pin_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="10dp"
+                        android:textColor="@color/green"
+                        android:hint="Confirm pin"
+                        android:gravity="center_horizontal"
+                        android:inputType="number"
+                        android:layout_weight="1"
+                        android:maxLength="4"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--save user details button-->
+            <Button
+                android:id="@+id/btn_to_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:background="@drawable/gray_solid_background"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="50dp"
+                android:onClick="saveUserInfo"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

@@ -13,6 +13,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -199,11 +200,21 @@ public class HomeActivity extends AppCompatActivity
         Bitmap bitmap = ((BitmapDrawable)drawable).getBitmap();
 
         for(int i = 0; i <= 8; i++){
-            Pizza pizza = new Pizza(drawable, "Pizza name " + i);
+            Pizza pizza = new Pizza();
             pizzaList.add(pizza);
         }
 
         mAdapter.notifyDataSetChanged();
 
     }
+
+    //to pizza activity
+    public void toPizzaActivity(){
+        Intent to_pizza_activity = new Intent(this, PizzaActivity.class);
+        startActivity(to_pizza_activity);
+    }
+
 }
+
+
+

@@ -9,12 +9,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
 
-import com.akoteng.pizzaapp.adapters.CartAdapter;
 import com.akoteng.pizzaapp.adapters.HistoryAdapter;
-import com.akoteng.pizzaapp.classes.Cart;
-import com.akoteng.pizzaapp.classes.History;
+import com.akoteng.pizzaapp.classes.Pizza;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +21,7 @@ public class HistoryActivity extends AppCompatActivity {
     //initialize
     RecyclerView recyclerView;
     RecyclerView.Adapter mAdapter;
-    List<History> historyList = new ArrayList<>();
+    List<Pizza> historyList = new ArrayList<>();
 
     //log tag
     public static final String LOG_TAG = HistoryActivity.class.getSimpleName();
@@ -76,7 +73,7 @@ public class HistoryActivity extends AppCompatActivity {
     public void prepareCartData(){
 
         for(int i = 0; i <= 8; i++){
-            History history = new History("Pizza name" + i, i, true, false, true, "Ordered on 27 Feb 2018: 2:47pm");
+            Pizza history = new Pizza();
             historyList.add(history);
         }
 

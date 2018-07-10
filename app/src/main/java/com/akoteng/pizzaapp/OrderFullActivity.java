@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+
 public class OrderFullActivity extends AppCompatActivity implements View.OnClickListener{
 
     //initialize
@@ -19,6 +22,12 @@ public class OrderFullActivity extends AppCompatActivity implements View.OnClick
         //initialize components
         btn_to_home = (Button)findViewById(R.id.btn_to_home);
         btn_to_home.setOnClickListener(this);
+
+        //animate splash page logo
+        YoYo.with(Techniques.Tada)
+                .duration(1200)
+                .repeat(1)
+                .playOn(findViewById(R.id.full_image));
     }
 
     @Override

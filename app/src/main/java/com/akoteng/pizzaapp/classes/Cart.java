@@ -3,19 +3,16 @@ package com.akoteng.pizzaapp.classes;
 
 public class Cart {
 
-    protected String name;
-    protected int quantity;
-    protected Boolean extra_cheese, thicker_crust, added_sauce;
+    protected String name, size, order_detail, status;
+    protected int quantity, price, order_id, product_id, customer_id;
 
-    public Cart() {
-    }
 
-    public Cart(String name, int quantity, Boolean extra_cheese, Boolean thicker_crust, Boolean added_sauce) {
+    public Cart(String name, String size, int quantity, int price, String order_detail ) {
         this.name = name;
+        this.size = size;
+        this.price = price;
+        this.order_detail = order_detail;
         this.quantity = quantity;
-        this.extra_cheese = extra_cheese;
-        this.thicker_crust = thicker_crust;
-        this.added_sauce = added_sauce;
     }
 
     public String getName() {
@@ -26,6 +23,30 @@ public class Cart {
         this.name = name;
     }
 
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public String getOrderDetail() {
+        return order_detail;
+    }
+
+    public void setOrderDetail(String order_detail) {
+        this.order_detail = order_detail;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public int getQuantity() {
         return quantity;
     }
@@ -34,28 +55,37 @@ public class Cart {
         this.quantity = quantity;
     }
 
-    public Boolean needExtraCheese() {
-        return extra_cheese;
+    public int getPrice() {
+        return price;
     }
 
-    public void setExtraCheese(Boolean extra_cheese) {
-        this.extra_cheese = extra_cheese;
+    public void setPrice(int price) {
+        this.price = price;
     }
 
-    public Boolean needThickerCrust() {
-        return extra_cheese;
+    public int getOrderId() {
+        return order_id;
     }
 
-    public void setThickerCrust(Boolean thicker_crust) {
-        this.thicker_crust = thicker_crust;
+    public void setOrderId(int order_id) {
+        this.order_id = order_id;
     }
 
-    public Boolean needAddedSauce() {
-        return added_sauce;
+    public int getProductId() {
+        return product_id;
     }
 
-    public void setAddedSauce(Boolean added_sauce) {
-        this.added_sauce = added_sauce;
+    public void setProductId(int product_id) {
+        this.product_id = product_id;
     }
+
+    public int getCustonmerId() {
+        return quantity;
+    }
+
+    public void setCustomerId(int customer_id) {
+        this.customer_id = customer_id;
+    }
+
 
 }

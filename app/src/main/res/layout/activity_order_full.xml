@@ -15,14 +15,16 @@
         tools:context=".OrderFullActivity">
 
         <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:id="@+id/full_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:src="@drawable/order_unsuccessful"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="120dp"
             android:layout_marginBottom="40dp"/>
 
         <TextView
+            android:id="@+id/full_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"

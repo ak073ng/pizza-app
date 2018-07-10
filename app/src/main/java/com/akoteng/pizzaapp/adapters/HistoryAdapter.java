@@ -9,15 +9,13 @@ import android.widget.TextView;
 
 
 import com.akoteng.pizzaapp.R;
-import com.akoteng.pizzaapp.classes.Cart;
-import com.akoteng.pizzaapp.classes.History;
 import com.akoteng.pizzaapp.classes.Pizza;
 
 import java.util.List;
 
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHolder> {
 
-    private List<History> historyList;
+    private List<Pizza> historyList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
@@ -31,7 +29,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
         }
     }
 
-    public HistoryAdapter(List<History> historyList) {
+    public HistoryAdapter(List<Pizza> historyList) {
         this.historyList = historyList;
     }
 
@@ -46,9 +44,9 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull HistoryAdapter.MyViewHolder holder, int position) {
-        History history = historyList.get(position);
+        //Pizza history = historyList.get(position);
         holder.pizza_name.setText("Pizza name");
-        holder.pizza_info.setText("x 1: includes extra cheese, thicker crust and added sauce");
+        holder.pizza_info.setText("Size: medium, Quantity: 3 , Info: Includes extra cheese, thicker crust and added sauce");
         holder.pizza_date.setText("Ordered on 27 Feb 2018: 2:47pm");
 
     }

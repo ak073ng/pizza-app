@@ -88,7 +88,7 @@ public class CartActivity extends AppCompatActivity implements View.OnClickListe
     public void prepareCartData(){
 
         for(int i = 0; i <= 8; i++){
-            Cart cart = new Cart("Pizza name" + i, i, true, false, true);
+            Cart cart = new Cart("Pizza name" + i, "medium", i, 1200, "Some info here");
             cartList.add(cart);
         }
 
